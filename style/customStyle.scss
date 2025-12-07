@@ -46,6 +46,10 @@ header, section{
     display: none;
 }
 
+.br-min{
+	display: none;
+}
+
 .feature-br{
     display: block;
 }
@@ -219,6 +223,9 @@ header, section{
     padding:0 2rem;
     text-align:center;
     text-transform:uppercase;
+	& *{
+		width: fit-content;
+	}
 }
 
 .gray{
@@ -354,7 +361,7 @@ header{
 	}
 
 	.desc{
-		padding:5rem 2rem 1rem 2rem;
+		padding:7rem 2rem 1rem 2rem;
 		overflow:hidden;
 	}
 }
@@ -416,7 +423,7 @@ header{
 		width: 90%;
 
 		.owl-dots{
-			padding-top: 2rem;
+			padding-top: 1rem;
 		}
 
 		.item{
@@ -428,14 +435,21 @@ header{
 			text-align: center;
 
 			.client{
-				width: 60%;
+				width: 280px;
+				height: 280px;
+				border: 3px solid $color-title-orange;
+				border-radius: 50%;
 				margin:0 auto 15px;
+				overflow: hidden;
 				img{
 					width: 100%;
-					border: 3px solid $color-title-orange;
-					border-radius: 50%;
-					
+					object-fit: cover; 
 				}
+			}
+
+			.date{
+				display: inline;
+				float: right;
 			}
 		}
 	}
@@ -453,7 +467,7 @@ header{
  
 		.owl-prev, .owl-next{
 			position: absolute;
-			top:34%;
+			top:28%;
 			z-index: 5;
 			cursor:pointer;
 			opacity: 0.5;
@@ -549,6 +563,10 @@ footer{
 }
 
 @media (max-width: 991px) {
+	.h3{
+		line-height: 2.6rem;
+		padding: 0.6rem 0;
+	}
 	.container{
 		margin:0 2rem;
 	}
@@ -585,7 +603,8 @@ footer{
 
 	.h3{
 		font-size: 2rem;
-		line-height: 4rem;
+		line-height: 2.3rem;
+		padding: 0.6rem 0;
 	}
 	
 	.text{
@@ -750,9 +769,19 @@ footer{
 			right: 0;
 		}
 	}
+
+	#reviews .container .owl-carousel .item{
+		.client{
+			width: 60%;
+			height: fit-content;
+			aspect-ratio: 1 / 1;
+		}
+	}
 }
 
 @media (max-width: 580px) {
+
+
 	.feature-br{
 		display: none;
 	}
@@ -761,12 +790,14 @@ footer{
 	}
 
 	.h1{
+		text-align: center;
 		font-size: 2.2rem;
 		line-height: 2.6rem;
 		padding: 1rem 0;
 	}
 
 	.h2{
+		text-align: center;
 		font-size: 2rem;
 		line-height: 2.3rem;
 		padding: 0.8rem 0;
@@ -779,7 +810,7 @@ footer{
 	}
 	
 	.text{
-		font-size: 1.3rem;
+		font-size: 1.5rem;
 		line-height: 1.7rem;
 	}
 
@@ -800,6 +831,7 @@ footer{
 }
 
 @media (max-width: 420px) {
+
 	.container{
 		margin:0 1rem;
 	}
@@ -816,8 +848,59 @@ footer{
 			text-align: center;
 		}
 	}
+
+	.br-min{
+		display: block;
+	}
+
+	.fixed .menu-line{
+		padding: 0;
+	}
+
+	#reviews .container{
+	.customNav{
+			img{
+				width: 5rem;
+				height: 5rem;
+			}
+	
+			.owl-prev, .owl-next{
+				top:20%;
+			}
+		}
+	}
 }
 
 @media (max-width: 320px) {
 
+	.h1{
+		font-size: 2rem;
+		line-height: 2.2rem;
+		padding: 0.8rem 0;
+	}
+
+	.h2{
+		font-size: 1.8rem;
+		line-height: 2rem;
+		padding: 0.6rem 0;
+	}
+
+	.h3{
+		font-size: 1.5rem;
+		line-height: 1.7rem;
+		padding: 0.4rem 0;
+	}
+	
+	.text{
+		font-size: 1.5rem;
+		line-height: 1.7rem;
+	}
+
+	.fixed .menu-line{
+
+		justify-content: end;
+	 	.tel-in-nav{
+			display: none;
+		}
+	}
 }
