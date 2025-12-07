@@ -39,6 +39,9 @@
 			if($('nav').hasClass('fixed')){
 				h+=$('nav').innerHeight();;
 			}
+			if($('.menu ul').hasClass('active')){
+				$('.menu ul').removeClass('active');
+			}
 			$('body, html').animate({scrollTop:top-h}, 500);
 		});
 
