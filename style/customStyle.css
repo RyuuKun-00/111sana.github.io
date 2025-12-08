@@ -226,14 +226,16 @@ header, section {
 
 /* головной блок */
 header {
-  height: 600px;
-  background: url(../images/header.webp) 50% 50% no-repeat;
+  height: 500px;
+  background: url(../images/header.webp) 70% 50% no-repeat;
   background-size: cover;
   border-bottom: 7px solid #dc6e15;
 }
 
 .titles {
-  padding-top: 180px;
+  float: left;
+  padding-top: 120px;
+  margin-left: 1rem;
 }
 .titles .title:last-child {
   text-transform: none;
@@ -497,6 +499,9 @@ footer .link a:hover {
   .margin-right {
     right: 254px;
   }
+  .titles {
+    margin-left: 2rem;
+  }
 }
 @media (max-width: 991px) {
   .h3 {
@@ -512,14 +517,16 @@ footer .link a:hover {
   .fixed .container .tel-in-nav {
     display: none;
   }
-  .titles {
-    padding-top: 150px;
-  }
-  header {
-    height: 500px;
-  }
 }
 @media (max-width: 767px) {
+  .titles {
+    float: none;
+    margin: 0;
+    padding-top: 240px;
+  }
+  header {
+    background-position: 100% 50%;
+  }
   .h1 {
     font-size: 2.5rem;
     line-height: 5rem;
@@ -710,6 +717,9 @@ footer .link a:hover {
   footer .info .contacts, footer .info .locations {
     display: block;
     text-align: start;
+  }
+  header {
+    background-position: 90% 50%;
   }
 }
 @media (max-width: 420px) {

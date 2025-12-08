@@ -239,14 +239,16 @@ header, section{
 
 /* головной блок */
 header{
-    height: 600px;
-	background:url(../images/header.webp) 50% 50% no-repeat;
+    height: 500px;
+	background:url(../images/header.webp) 70% 50% no-repeat;
 	background-size:cover;
 	border-bottom:7px solid $color-title-orange;
 }
 
 .titles{
-	padding-top:180px;
+	float: left;
+	padding-top:120px;
+	margin-left: 1rem;
     
     .title:last-child{
 		text-transform:none;
@@ -557,6 +559,11 @@ footer{
 	.margin-right{
 		right: 254px;
 	}
+
+	
+	.titles{
+		margin-left: 2rem;
+	}
 }
 
 @media (max-width: 991px) {
@@ -576,18 +583,21 @@ footer{
 		}
 	}
 
-	.titles{
-	padding-top:150px;
-	}
 
-	header{
-		height: 500px;
-	}
+
 }
 
 @media (max-width: 767px) {
 
+	.titles{
+		float: none;
+		margin: 0;
+		padding-top: 240px;
+	}
 
+	header{
+		background-position: 100% 50%;
+	}
 
 	.h1{
 		font-size: 2.5rem;
@@ -820,6 +830,10 @@ footer{
 				text-align:start;
 			}
 		}
+	}
+
+	header{
+		background-position: 90% 50%;
 	}
 }
 
