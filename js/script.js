@@ -31,7 +31,7 @@
 			}
 		});
 		// Плавный переход по ссылке
-		$('nav a').click(function(e){
+		$('nav .menu a').click(function(e){
 			e.preventDefault();
 			var idel = jQuery(this).attr('href');
 			var top = jQuery(idel).offset().top;
